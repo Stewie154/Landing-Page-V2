@@ -67,7 +67,15 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* displays nav links horizontally across container */
+}
+
+.navbar__menu a {
+    text-decoration: none;
+    /* removes blue line from links  */
 }
 
 .navbar__menu li {
