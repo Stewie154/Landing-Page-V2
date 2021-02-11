@@ -30,4 +30,26 @@ const populateNavItems = (sects) => {
        navItemsContainer.appendChild(aTag);
     }
 }
+
+
+//function to check where element is on the page
+const highlightActive = (sects) => {
+    //loop through all sections
+    for(sect of sects) {
+        //store position properties for section via getBoundingClientRect
+        const posElements = sect.getBoundingClientRect();
+        //store distance of bottom of section to top of viewport
+        const bottom = posElements.bottom;
+        //console log used to see which range of numbers for bottom value would be a suitable cut off point for adding active class 
+        //console.log('bottom value is: ' + bottom);
+        //Ternary operator checks if the bottom value is between 600 & 1300. If so, the section is in view for the user and the 'your-active-class' is added to make it stand out. If not, the class is removed to make sure the section isn't being highlighted.
+        bottom > 600 && bottom < 1300 ? sect.classList.add('your-active-class') : sect.classList.remove('your-active-class');
+    }
+}
+
+//call function to populate navbar
 populateNavItems(sections);
+//call highlightActive function when user scrolls, to keep checking which section needs the class
+document.addEventListener('scroll', function() {
+    highlightActive(sections);
+})
