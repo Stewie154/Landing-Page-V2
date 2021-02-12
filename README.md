@@ -6,9 +6,9 @@
 
 ## About
 
-For this project I've been given a static web page by Udacity, I needed to make it more interactive by using JavaScript to manipulate the DOM.  
+For this project I was given a static web page by Udacity, I needed to make it more interactive by using JavaScript to manipulate the DOM.  
 
-This Project has been built using HTML, CSS and JavaScript.
+This Project was built using HTML, CSS and JavaScript.
 
 The functionalities added include:
 

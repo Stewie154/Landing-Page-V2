@@ -35,7 +35,7 @@ const populateNavItems = (sects) => {
 //function to check where element is on the page
 const highlightActive = (sects) => {
     //loop through all sections
-    for(sect of sects) {
+    for (sect of sects) {
         //store position properties for section via getBoundingClientRect
         const posElements = sect.getBoundingClientRect();
         //store distance of bottom of section to top of viewport
@@ -47,9 +47,42 @@ const highlightActive = (sects) => {
     }
 }
 
+//function to stop nav links from scrolling, re-do with javascript. 
+const scrollToSection = (event) => {
+    //stops a tag functionality
+    event.preventDefault();
+    console.log('link has been clicked')
+    //target <a> tag instead of <li> tag
+    aTag = event.target.parentElement;
+    //Checks if href of aTag includes the id name of each section. If so, grab section and use scrollIntoView function to scroll to it.
+    if (aTag.href.includes("#section1")) {
+        const section1 = document.getElementById('section1');
+        section1.scrollIntoView({behavior: "smooth"});
+    } else if (aTag.href.includes("#section2")) {
+        const section2 = document.getElementById('section2');
+        section2.scrollIntoView({behavior: "smooth"});
+    } else if (aTag.href.includes("#section3")) {
+        const section3 = document.getElementById('section3');
+        section3.scrollIntoView({behavior: "smooth"});
+    } else if (aTag.href.includes("#section4")) {
+        const section4 = document.getElementById('section4');
+        section4.scrollIntoView({behavior: "smooth"});
+    }
+}
+
 //call function to populate navbar
 populateNavItems(sections);
 //call highlightActive function when user scrolls, to keep checking which section needs the class
 document.addEventListener('scroll', function() {
     highlightActive(sections);
 })
+
+//grab all links via html a tag
+const links = document.getElementsByTagName('a');
+
+//iterate through links to add click event listener with scrollToSection function for each one
+for (link of links) {
+    link.addEventListener('click', function(e) {
+        scrollToSection(e);
+    })
+}
