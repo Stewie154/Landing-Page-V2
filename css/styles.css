@@ -89,7 +89,8 @@ section {
 
 .navbar__menu .menu__link {
     display: block;
-    padding: 1em;
+    /* changed padding to only include top and bottom, making all links viewable on smaller screens */
+    padding: 1em 0em;
     font-weight: bold;
     text-decoration: none;
     color: #000;
