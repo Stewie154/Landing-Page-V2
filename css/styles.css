@@ -10,10 +10,7 @@
 
 
 /* ---- Base Rules ---- */
-/* smooth scroll when links are clicked */
-html {
-    scroll-behavior: smooth;
-}
+/* deleted scroll behaviour smooth, this effect will now be applied in javascript*/
 
 body {
     background: rgb(136,203,171);
@@ -91,7 +88,7 @@ section {
     display: block;
     /* changed padding to only include top and bottom, making all links viewable on smaller screens */
     padding: 1em 0em;
-    font-weight: bold;
+    /* removed font-weight: bold to make room for links on smaller screens */
     text-decoration: none;
     color: #000;
 }
