@@ -4,10 +4,20 @@
 
 * [Instructions](#instructions)
 
-## Instructions
+## About
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+For this project I've been given a static web page by Udacity, I needed to make it more interactive by using JavaScript to manipulate the DOM.  
 
-To get started, open `js/app.js` and start building out the app's functionality
+This Project has been built using HTML, CSS and JavaScript.
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+The functionalities added include:
+
+    Dynamically populating the navbar with list elements in javascript.
+
+    Writing a JavaScript function to determine which section of the website is in view, and adding a css class to that section to make it stand out.
+
+    Making the dynamically populated nav links clickable, so they direct you to the relative page on the website.
+
+During this project I've improved my understanding of creating / manipulating elements with javascript. I've now got a better understanding of the DOM and how it can be used to dynamically change web pages. 
+
+The part that I struggled with the most was the function that displays the active section. But after ultimately solving the problem, I now feel more confidant that I can solve more problems moving forward.
